@@ -1,8 +1,9 @@
 package me.shkschneider.product
 
+import me.shkschneider.entities.AbstractProduct
 import java.util.UUID
 
-data class Product(
-    val id: UUID = UUID.randomUUID(),
-    val name: String
-)
+internal data class Product(
+    override val id: UUID = UUID.randomUUID(),
+    override val name: String
+) : AbstractProduct(id, name)

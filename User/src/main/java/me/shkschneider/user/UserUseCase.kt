@@ -1,9 +1,13 @@
 package me.shkschneider.user
 
-class UserUseCase(
-    private val userRepository: UserRepository
-) {
+import me.shkschneider.entities.AbstractUser
+import org.koin.standalone.KoinComponent
+import org.koin.standalone.inject
 
-    fun getUser(name: String) = userRepository.getUser(name)
+class UserUseCase : KoinComponent {
+
+    private val userRepository by inject<UserRepository>()
+
+    fun getUser(name: String): AbstractUser = userRepository.getUser(name)
 
 }

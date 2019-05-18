@@ -1,23 +1,23 @@
 package me.shkschneider.architekture
 
-import me.shkschneider.order.Order
-import me.shkschneider.product.Product
-import me.shkschneider.user.User
+import me.shkschneider.entities.AbstractOrder
+import me.shkschneider.entities.AbstractProduct
+import me.shkschneider.entities.AbstractUser
 
 object Tracker {
 
-    fun track(user: User) = run {
+    fun track(user: AbstractUser) = run {
         user.id
         user.name
     }
 
-    fun track(order: Order) = run {
+    fun track(order: AbstractOrder) = run {
         order.id
         order.product
         order.user
     }
 
-    fun track(product: Product) = run {
+    fun track(product: AbstractProduct) = run {
         product.id
         product.name
     }

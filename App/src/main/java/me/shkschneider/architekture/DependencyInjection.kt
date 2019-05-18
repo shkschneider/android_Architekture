@@ -1,26 +1,15 @@
 package me.shkschneider.architekture
 
 import android.app.Application
-import me.shkschneider.order.OrderRepository
-import me.shkschneider.order.OrderUseCase
-import me.shkschneider.product.ProductRepository
-import me.shkschneider.product.ProductUseCase
-import me.shkschneider.user.UserRepository
-import me.shkschneider.user.UserUseCase
+import me.shkschneider.order.OrderModule
+import me.shkschneider.product.ProductModule
+import me.shkschneider.user.UserModule
 import org.koin.android.ext.android.startKoin
-import org.koin.dsl.module.module
 
 fun Application.dependencyInjection() {
     startKoin(applicationContext, listOf(
-        module("Repositories") {
-            single { OrderRepository() }
-            single { ProductRepository() }
-            single { UserRepository() }
-        },
-        module("UseCases") {
-            factory { OrderUseCase(get()) }
-            factory { ProductUseCase(get()) }
-            factory { UserUseCase(get()) }
-        }
+        OrderModule.module,
+        ProductModule.module,
+        UserModule.module
     ))
 }

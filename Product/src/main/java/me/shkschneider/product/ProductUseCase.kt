@@ -1,9 +1,13 @@
 package me.shkschneider.product
 
-class ProductUseCase(
-    private val productRepository: ProductRepository
-) {
+import me.shkschneider.entities.AbstractProduct
+import org.koin.standalone.KoinComponent
+import org.koin.standalone.inject
 
-    fun getProduct(name: String) = productRepository.getProduct(name)
+class ProductUseCase : KoinComponent {
+
+    private val productRepository by inject<ProductRepository>()
+
+    fun getProduct(name: String): AbstractProduct = productRepository.getProduct(name)
 
 }

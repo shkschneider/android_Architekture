@@ -32,4 +32,5 @@ dependencies {
     implementation project(":Order")
     implementation project(":User")
     implementation project(":Product")
+    implementation project(":Entities")
 }

@@ -1,12 +1,15 @@
 package me.shkschneider.order
 
-import me.shkschneider.product.Product
-import me.shkschneider.user.User
+import me.shkschneider.entities.AbstractOrder
+import me.shkschneider.entities.AbstractProduct
+import me.shkschneider.entities.AbstractUser
+import org.koin.standalone.KoinComponent
+import org.koin.standalone.inject
 
-class OrderUseCase(
-    private val orderRepository: OrderRepository
-) {
+class OrderUseCase : KoinComponent {
 
-    fun getOrder(user: User, product: Product) = orderRepository.getOrder(user, product)
+    private val orderRepository by inject<OrderRepository>()
+
+    fun getOrder(user: AbstractUser, product: AbstractProduct): AbstractOrder = orderRepository.getOrder(user, product)
 
 }

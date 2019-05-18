@@ -1,6 +1,6 @@
 package me.shkschneider.user
 
-class UserRepository {
+internal class UserRepository {
 
     fun getUser(name: String) = User(name = name)
 
