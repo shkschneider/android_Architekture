@@ -11,11 +11,13 @@ class MainApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        startKoin(applicationContext, listOf(
-            OrderModule.module,
-            ProductModule.module,
-            UserModule.module
-        ))
+        startKoin(
+            applicationContext, listOf(
+                OrderModule.module,
+                ProductModule.module,
+                UserModule.module
+            )
+        )
     }
 
 }
