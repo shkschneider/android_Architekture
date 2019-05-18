@@ -1,8 +1,8 @@
 package me.shkschneider.architekture
 
-import me.shkschneider.entities.Order
-import me.shkschneider.entities.Product
-import me.shkschneider.entities.User
+import me.shkschneider.order.Order
+import me.shkschneider.product.Product
+import me.shkschneider.user.User
 
 object Tracker {
 

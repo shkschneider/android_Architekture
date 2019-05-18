@@ -1,5 +1,4 @@
 include ':App'
-include ':Entities'
-include ':Repositories'
-include ':UseCases'
-include ':DependencyInjection'
+include ':User'
+include ':Product'
+include ':Order'
