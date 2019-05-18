@@ -1,10 +1,11 @@
 package me.shkschneider.order
 
-import me.shkschneider.entities.AbstractProduct
-import me.shkschneider.entities.AbstractUser
+import me.shkschneider.entities.Order
+import me.shkschneider.entities.Product
+import me.shkschneider.entities.User
 
 internal class OrderRepository {
 
-    fun getOrder(user: AbstractUser, product: AbstractProduct) = Order(user = user, product = product)
+    fun getOrder(user: User, product: Product) = Order(user = user, product = product)
 
 }
