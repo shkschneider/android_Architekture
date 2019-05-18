@@ -1,6 +1,6 @@
-package me.shkschneider.architekture.usecases
+package me.shkschneider.usecases
 
-import me.shkschneider.architekture.repositories.ProductRepository
+import me.shkschneider.repositories.ProductRepository
 
 class ProductUseCase(
     private val productRepository: ProductRepository

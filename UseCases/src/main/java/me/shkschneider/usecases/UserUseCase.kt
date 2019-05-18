@@ -1,6 +1,6 @@
-package me.shkschneider.architekture.usecases
+package me.shkschneider.usecases
 
-import me.shkschneider.architekture.repositories.UserRepository
+import me.shkschneider.repositories.UserRepository
 
 class UserUseCase(
     private val userRepository: UserRepository

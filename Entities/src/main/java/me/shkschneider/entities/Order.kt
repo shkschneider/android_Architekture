@@ -1,4 +1,4 @@
-package me.shkschneider.architekture.entities
+package me.shkschneider.entities
 
 import java.util.UUID
 

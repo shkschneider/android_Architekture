@@ -1,8 +1,8 @@
-package me.shkschneider.architekture.entities
+package me.shkschneider.entities
 
 import java.util.UUID
 
-data class Product(
+data class User(
     val id: UUID = UUID.randomUUID(),
     val name: String
 )

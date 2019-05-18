@@ -1,14 +1,14 @@
 package me.shkschneider.architekture
 
 import android.app.Application
-import org.koin.android.ext.android.startKoin
+import me.shkschneider.depencyinjection.DependencyInjection
 
 @Suppress("unused")
 class MainApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        startKoin(this@MainApplication, listOf(KoinModule.app))
+        DependencyInjection.resolve(this@MainApplication)
     }
 
 }

@@ -2,9 +2,9 @@ package me.shkschneider.architekture
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import me.shkschneider.architekture.usecases.OrderUseCase
-import me.shkschneider.architekture.usecases.ProductUseCase
-import me.shkschneider.architekture.usecases.UserUseCase
+import me.shkschneider.usecases.OrderUseCase
+import me.shkschneider.usecases.ProductUseCase
+import me.shkschneider.usecases.UserUseCase
 import org.koin.android.ext.android.inject
 
 class MainActivity : AppCompatActivity() {
