@@ -1,9 +1,9 @@
 package me.shkschneider.product
 
-import me.shkschneider.entities.ShopProduct
+import me.shkschneider.entities.AbstractProduct
 import java.util.UUID
 
-class Product(
+internal class Product(
     override val id: UUID = UUID.randomUUID(),
     val name: String? = null
-) : ShopProduct
+) : AbstractProduct

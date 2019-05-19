@@ -1,12 +1,13 @@
 package me.shkschneider.order
 
-import me.shkschneider.entities.ShopOrder
-import me.shkschneider.product.Product
-import me.shkschneider.user.User
+import me.shkschneider.entities.AbstractOrder
+import me.shkschneider.entities.AbstractProduct
+import me.shkschneider.entities.AbstractUser
+import me.shkschneider.entities.shop.ShopOrder
 import java.util.UUID
 
-class Order(
+internal class Order(
     override val id: UUID = UUID.randomUUID(),
-    val user: User? = null,
-    val product: Product? = null
-) : ShopOrder
+    val user: AbstractUser? = null,
+    val product: AbstractProduct? = null
+) : AbstractOrder, ShopOrder

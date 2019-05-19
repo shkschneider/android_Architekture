@@ -2,6 +2,6 @@ package me.shkschneider.entities
 
 import java.util.UUID
 
-interface ShopUser {
+interface AbstractProduct {
     val id: UUID
 }

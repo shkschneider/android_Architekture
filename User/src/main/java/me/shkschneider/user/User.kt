@@ -1,9 +1,9 @@
 package me.shkschneider.user
 
-import me.shkschneider.entities.ShopUser
+import me.shkschneider.entities.AbstractUser
 import java.util.UUID
 
-class User(
+internal class User(
     override val id: UUID = UUID.randomUUID(),
     val name: String? = null
-) : ShopUser
+) : AbstractUser

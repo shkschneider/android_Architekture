@@ -1,7 +1,7 @@
 package me.shkschneider.shop
 
 import androidx.lifecycle.ViewModel
-import me.shkschneider.entities.ShopOrder
+import me.shkschneider.entities.shop.ShopOrder
 import me.shkschneider.order.OrderUseCase
 import me.shkschneider.product.ProductUseCase
 import me.shkschneider.user.UserUseCase
@@ -17,7 +17,7 @@ class ShopViewModel : ViewModel(), KoinComponent {
     fun order(userName: String, productName: String): ShopOrder {
         val user = userUseCase.getUser(userName)
         val product = productUseCase.getProduct(productName)
-        return orderUseCase.getOrder(user, product)
+        return orderUseCase.getOrder(user, product) as ShopOrder
     }
 
 }

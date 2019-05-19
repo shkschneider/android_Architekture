@@ -18,5 +18,8 @@ dependencies {
     implementation "org.koin:koin-androidx-viewmodel:${versions.koin}"
 
     implementation project(":Entities")
+    implementation project(":User")
+    implementation project(":Product")
+    implementation project(":Order")
     implementation project(":Shop")
 }
