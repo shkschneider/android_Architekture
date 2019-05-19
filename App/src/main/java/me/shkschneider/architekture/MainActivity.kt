@@ -13,12 +13,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val shopUser = shopViewModel.getUser("John Doe")
-        Tracker.track(shopUser)
-        val shopProduct = shopViewModel.getProduct("Coffee")
-        Tracker.track(shopProduct)
-        val shopOrder = shopViewModel.getOrder(shopUser, shopProduct)
-        Tracker.track(shopOrder)
+        val order = shopViewModel.order(userName = "John Doe", productName = "Coffee")
+        Tracker.track(order)
     }
 
 }

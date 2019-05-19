@@ -1,5 +1,6 @@
 apply plugin: 'com.android.library'
 apply from: "${project.rootDir}/Android.gradle"
+apply from: "${project.rootDir}/Kotlin.gradle"
 
 dependencies {
 }

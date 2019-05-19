@@ -1,7 +1,7 @@
 package me.shkschneider.order
 
-import me.shkschneider.entities.Product
-import me.shkschneider.entities.User
+import me.shkschneider.product.Product
+import me.shkschneider.user.User
 import org.koin.standalone.KoinComponent
 import org.koin.standalone.inject
 
