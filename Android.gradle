@@ -1,0 +1,15 @@
+android {
+    compileSdkVersion versions.compileSdkVersion
+    defaultConfig {
+        minSdkVersion versions.minSdkVersion
+        targetSdkVersion versions.targetSdkVersion
+        versionCode versions.versionCode
+        versionName versions.versionName
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+    compileSdkVersion versions.compileSdkVersion
+}
