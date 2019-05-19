@@ -4,6 +4,7 @@ import android.app.Application
 import me.shkschneider.order.OrderModule
 import me.shkschneider.product.ProductModule
 import me.shkschneider.shop.ShopModule
+import me.shkschneider.tracking.TrackingModule
 import me.shkschneider.user.UserModule
 import org.koin.android.ext.android.startKoin
 
@@ -13,6 +14,7 @@ fun Application.dependencyInjection() {
             OrderModule.module,
             ProductModule.module,
             ShopModule.module,
+            TrackingModule.module,
             UserModule.module
         )
     )

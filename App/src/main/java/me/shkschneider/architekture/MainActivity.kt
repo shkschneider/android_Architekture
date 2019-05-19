@@ -15,7 +15,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val order: ShopOrder = shopViewModel.order(userName = "John Doe", productName = "Coffee")
-        Tracker.track(order)
     }
 
 }

@@ -11,4 +11,5 @@ dependencies {
     implementation project(":Product")
     implementation project(":User")
     implementation project(":Shop")
+    implementation project(":Tracking")
 }
