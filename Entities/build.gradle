@@ -17,9 +17,12 @@ android {
     }
     compileSdkVersion versions.compileSdkVersion
 }
+androidExtensions {
+    experimental = true
+}
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.kotlin}"
 
-    implementation project(":Entities")
+    implementation 'androidx.core:core-ktx:1.0.2'
 }

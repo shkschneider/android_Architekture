@@ -19,7 +19,7 @@ android {
 }
 
 dependencies {
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.kotlin}"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.kotlin}"
 
     implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'androidx.core:core-ktx:1.0.2'
@@ -29,6 +29,7 @@ dependencies {
     implementation "org.koin:koin-androidx-scope:${versions.koin}"
     implementation "org.koin:koin-androidx-viewmodel:${versions.koin}"
 
+    implementation project(":Entities")
     implementation project(":Order")
     implementation project(":User")
     implementation project(":Product")

@@ -1,4 +1,4 @@
-include ':App'
+include ':App', ':Entities'
 include ':User'
 include ':Product'
 include ':Order'
