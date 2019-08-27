@@ -7,11 +7,11 @@ dependencies {
     api "org.koin:koin-androidx-scope:${versions.koin}"
     api "org.koin:koin-androidx-viewmodel:${versions.koin}"
 
-    implementation project(":UseCases:OrderUseCase")
-    implementation project(":UseCases:ProductUseCase")
-    implementation project(":UseCases:UserUseCase")
+    implementation project(":OrderUseCase")
+    implementation project(":ProductUseCase")
+    implementation project(":UserUseCase")
 
-    implementation project(":Repositories:OrderRepository")
-    implementation project(":Repositories:ProductRepository")
-    implementation project(":Repositories:UserRepository")
+    implementation project(":OrderRepository")
+    implementation project(":ProductRepository")
+    implementation project(":UserRepository")
 }
