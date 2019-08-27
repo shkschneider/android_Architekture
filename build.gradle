@@ -31,3 +31,31 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+subprojects {
+    afterEvaluate { project ->
+        if (project.hasProperty('android')) {
+            def isAndroidApplication = project.plugins.findPlugin('com.android.application') != null
+            def isAndroidLibrary = project.plugins.findPlugin('com.android.library') != null
+            def hasKotlinAndroid = project.plugins.findPlugin('kotlin-android') != null
+            android {
+                compileSdkVersion versions.compileSdkVersion
+                defaultConfig {
+                    minSdkVersion versions.minSdkVersion
+                    targetSdkVersion versions.targetSdkVersion
+                    if (isAndroidApplication) {
+                        versionCode 1
+                        versionName "1.0.0"
+                    }
+                }
+            }
+            if (hasKotlinAndroid) {
+                dependencies {
+//                    implementation "org.jetbrains.kotlin:kotlin-stdlib:${versions.kotlin}"
+//                    implementation "org.jetbrains.kotlin:kotlin-stdlib-common:${versions.kotlin}"
+                    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.kotlin}"
+                }
+            }
+        }
+    }
+}

@@ -2,29 +2,16 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
-android {
-    compileSdkVersion versions.compileSdkVersion
-    defaultConfig {
-        minSdkVersion versions.minSdkVersion
-        targetSdkVersion versions.targetSdkVersion
-        versionCode 1
-        versionName "1.0.0"
-    }
-    buildTypes {
-        release {
-            minifyEnabled false
-        }
-    }
-    compileSdkVersion versions.compileSdkVersion
-}
-
 dependencies {
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.kotlin}"
-
     api "org.koin:koin-android:${versions.koin}"
     api "org.koin:koin-androidx-scope:${versions.koin}"
     api "org.koin:koin-androidx-viewmodel:${versions.koin}"
 
-    implementation project(":Repositories")
-    implementation project(":UseCases")
+    implementation project(":UseCases:OrderUseCase")
+    implementation project(":UseCases:ProductUseCase")
+    implementation project(":UseCases:UserUseCase")
+
+    implementation project(":Repositories:OrderRepository")
+    implementation project(":Repositories:ProductRepository")
+    implementation project(":Repositories:UserRepository")
 }

@@ -2,30 +2,19 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
-android {
-    compileSdkVersion versions.compileSdkVersion
-    defaultConfig {
-        applicationId "me.shkschneider.architekture"
-        minSdkVersion versions.minSdkVersion
-        targetSdkVersion versions.targetSdkVersion
-        versionCode 1
-        versionName "1.0.0"
-    }
-    buildTypes {
-        release {
-            minifyEnabled false
-        }
-    }
-}
+android.defaultConfig.applicationId "me.shkschneider.architekture"
 
 dependencies {
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.kotlin}"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.kotlin}"
 
     implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'androidx.core:core-ktx:1.0.2'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
 
     implementation project(":DependencyInjection")
-    implementation project(":UseCases")
     implementation project(":Entities")
+
+    implementation project(":UseCases:OrderUseCase")
+    implementation project(":UseCases:ProductUseCase")
+    implementation project(":UseCases:UserUseCase")
 }
