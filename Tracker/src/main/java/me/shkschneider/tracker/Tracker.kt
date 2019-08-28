@@ -1,4 +1,4 @@
-package me.shkschneider.architekture
+package me.shkschneider.tracker
 
 import me.shkschneider.entities.Order
 import me.shkschneider.entities.Product

@@ -15,4 +15,6 @@ dependencies {
     implementation project(":Order")
     implementation project(":Product")
     implementation project(":User")
+
+    implementation project(":Tracker")
 }

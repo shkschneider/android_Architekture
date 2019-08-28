@@ -20,3 +20,5 @@ listOf(
         project(":$repository").projectDir = File(rootDir, "${it}/$repository")
     }
 }
+
+include(":Tracker")

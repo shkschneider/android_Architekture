@@ -2,6 +2,7 @@ package me.shkschneider.architekture
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import me.shkschneider.tracker.Tracker
 import me.shkschneider.usecases.OrderUseCase
 import me.shkschneider.usecases.ProductUseCase
 import me.shkschneider.usecases.UserUseCase
