@@ -1,0 +1,6 @@
+apply plugin: 'com.android.library'
+
+dependencies {
+    api project(":UserUseCase")
+    api project(":UserRepository")
+}

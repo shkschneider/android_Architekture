@@ -14,7 +14,7 @@ dependencies {
     implementation project(":DependencyInjection")
     implementation project(":Entities")
 
-    implementation project(":OrderUseCase")
-    implementation project(":ProductUseCase")
-    implementation project(":UserUseCase")
+    implementation project(":Order")
+    implementation project(":Product")
+    implementation project(":User")
 }
