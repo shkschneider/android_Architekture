@@ -4,19 +4,19 @@ include(":DependencyInjection")
 include(":Entities")
 
 listOf(
-    "OrderUseCase",
-    "ProductUseCase",
-    "UserUseCase"
+    "Order",
+    "Product",
+    "User"
 ).forEach {
-    include(":$it")
-    project(":$it").projectDir = File(rootDir, "UseCases/$it")
+    include(":${it}UseCase")
+    project(":${it}UseCase").projectDir = File(rootDir, "${it}/${it}UseCase")
 }
 
 listOf(
-    "OrderRepository",
-    "ProductRepository",
-    "UserRepository"
+    "Order",
+    "Product",
+    "User"
 ).forEach {
-    include(":$it")
-    project(":$it").projectDir = File(rootDir, "Repositories/$it")
+    include(":${it}Repository")
+    project(":${it}Repository").projectDir = File(rootDir, "${it}/${it}Repository")
 }
