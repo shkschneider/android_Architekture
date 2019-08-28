@@ -6,6 +6,7 @@ dependencies {
     api "org.koin:koin-android:${versions.koin}"
     api "org.koin:koin-androidx-scope:${versions.koin}"
     api "org.koin:koin-androidx-viewmodel:${versions.koin}"
+    api "org.koin:koin-androidx-ext:${versions.koin}"
 
     implementation project(":Order")
     implementation project(":Product")
