@@ -8,7 +8,9 @@ listOf(
     "Product",
     "User"
 ).forEach {
-    include(":$it")
+    if (File("$rootDir/$it/build.gradle").exists()) {
+        include(":$it")
+    }
     val useCase = "${it}UseCase"
     if (File("$rootDir/$it/$useCase").exists()) {
         include(":$useCase")
