@@ -1,26 +1,21 @@
-include(":App")
-include(":DependencyInjection")
-
-include(":Entities")
-
-listOf(
-    "Order",
-    "Product",
-    "User"
-).forEach {
-    if (File("$rootDir/$it/build.gradle").exists()) {
-        include(":$it")
-    }
-    val useCase = "${it}UseCase"
-    if (File("$rootDir/$it/$useCase").exists()) {
-        include(":$useCase")
-        project(":$useCase").projectDir = File(rootDir, "${it}/$useCase")
-    }
-    val repository = "${it}Repository"
-    if (File("$rootDir/$it/$repository").exists()) {
-        include(":$repository")
-        project(":$repository").projectDir = File(rootDir, "${it}/$repository")
-    }
+fun submodules(parent: String? = "", file: File) {
+    file.listFiles()
+        ?.filter { it.isFile && it.name.endsWith(".gradle") }
+        ?.forEach {
+            val module = it.parentFile.name
+            println(":$module")
+            include(":$module")
+            if (parent != null) {
+                project(":$module").projectDir = File(rootDir, "$parent/$module")
+            }
+            it.parentFile.listFiles()
+                ?.filter { it.isDirectory && !it.name.startsWith(".") }
+                ?.forEach {
+                    submodules(module, it)
+                }
+        }
 }
 
-include(":Tracker")
+rootDir.listFiles()?.forEach {
+    submodules(null, it)
+}
